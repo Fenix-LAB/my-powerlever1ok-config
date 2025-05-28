@@ -45,6 +45,9 @@
   local magenta='#FF6AC1'
   local cyan='#9AEDFE'
   local white='#F1F1F0'
+  local green-github=43
+  local blue-directory=81
+  local yellow-python=229
 
   # Left prompt segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
@@ -89,7 +92,7 @@
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OVERWRITE_STATE=false
 
   # Grey Python Virtual Environment.
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$yellow
+  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$yellow-python
   typeset -g POWERLEVEL9K_PYTHON_ICON='\uE606'
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
   typeset -g POWERLEVEL9K_VIRTUALENV_STRATEGY=basename
@@ -116,7 +119,7 @@
   typeset -g POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=' ⇡' # Flecha saliente con espacio
 
   # Configuración base (igual que la tuya)
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=34
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$green-github
   typeset -g POWERLEVEL9K_VCS_LOADING_TEXT=
   typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
   typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$cyan
@@ -127,7 +130,7 @@
   typeset -g POWERLEVEL9K_VCS_CONTENT_EXPANSION='${${${P9K_CONTENT//⇣ / ⇣}//⇡ / ⇡}//:/ }'
 
   # Blue current directory.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$blue
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$blue-directory
 
   # Context format when root: user@host. The first part white, the rest grey.
   typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="%F{$white}%n%f%F{$grey}@%m%f"
